@@ -3,7 +3,7 @@
     background-color: #121212;
     padding: 1.5rem;
     border-radius: 10px;
-    text-align: left;
+    text-align: center;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
     margin: 1rem auto;
 }
@@ -12,7 +12,7 @@
     font-size: 2.5rem;
     font-weight: 700;
     color: #f0f0f0;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
 }
 
 .tech-list {
@@ -21,39 +21,24 @@
     gap: 1rem;
 }
 
-/* Wrapper for each marquee row */
 .tech-row-wrapper {
     position: relative;
     overflow: hidden;
+    display: flex;
+    justify-content: center;
 }
 
-/* The row that scrolls continuously */
 .tech-row {
     display: flex;
     gap: 1rem;
-    /* Duplicate width ensures seamless looping; adjust if needed */
-    width: 200%;
-}
-
-/* Marquee animation continuously moves the row from left to right */
-.marquee {
-    animation: marquee 15s linear infinite;
-}
-
-/* Keyframes: start at 0 and translate so that the duplicate items slide in */
-@keyframes marquee {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(-50%);
-    }
+    transition: transform 0s linear;
 }
 
 .tech-item {
     display: flex;
     align-items: center;
     gap: 0.5rem;
+    padding-right: 1rem;
 }
 
 .tech-item img {
@@ -65,24 +50,4 @@
 .tech-item span {
     font-size: 1.2rem;
     color: #d0d0d0;
-}
-
-/* Fade overlay styles */
-.fade-overlay {
-    position: absolute;
-    top: 0;
-    width: 60px;
-    height: 100%;
-    pointer-events: none;
-    z-index: 10;
-}
-
-.fade-overlay.left {
-    left: 0;
-    background: linear-gradient(to right, #121212, transparent);
-}
-
-.fade-overlay.right {
-    right: 0;
-    background: linear-gradient(to left, #121212, transparent);
 }
