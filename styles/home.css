@@ -1,0 +1,42 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #121212;
+    color: #ffffff;
+    font-family: 'Roboto Mono', monospace;
+}
+
+.home-content {
+    margin-top: 80px;
+    padding: 2rem 10%;
+    display: flex;
+    flex-direction: column; /* This makes the cards stack vertically */
+    justify-content: center;
+    align-items: center;
+}
+
+/* Reset default styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Smooth scroll behavior */
+html {
+    scroll-behavior: smooth;
+}
+
+#infocard-placeholder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+#technology-placeholder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
