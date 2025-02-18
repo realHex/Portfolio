@@ -10,22 +10,44 @@
 
 .tech-title {
     font-size: 2.5rem;
-    font-weight: 700;
+    font-weight: 500;
     color: #f0f0f0;
     margin-bottom: 2rem;
 }
 
 .tech-list {
     display: flex;
+    align-items: center;
     flex-direction: column;
     gap: 1rem;
 }
 
 .tech-row-wrapper {
-    position: relative;
+    max-width:  80%;
+    outline: 3px solid lime;
+}
+
+.tech-row-wrapper[data-animated="true"] {
     overflow: hidden;
-    display: flex;
-    justify-content: center;
+    -webkit-mask: linear-gradient(90deg, transparent, white 10%, 90%, transparent); /*For chromium browsers*/
+    mask: linear-gradient(90deg, transparent, white 10%, 90%, transparent);
+}
+
+.tech-row-wrapper[data-animated="true"] .tech-row {
+    flex-wrap: nowrap;
+    width: max-content;
+    animation: scroll var(--_animation-duration, 40s) 
+    var(--_animation-direction, forwards)linear infinite;
+}
+
+.tech-row-wrapper[data-speed="slow"] {
+    --_animation-duration: 80s;
+}
+
+@keyframes scroll {
+    to {
+        transform: translate(calc(-50% - 0.5rem));
+    }
 }
 
 .tech-row {

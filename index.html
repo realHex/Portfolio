@@ -45,7 +45,13 @@
         fetch('components/technology.html')
             .then(response => response.text())
             .then(data => {
-                document.getElementById('technology-placeholder').innerHTML = data;
+                const techHolder = document.getElementById('technology-placeholder');
+                techHolder.innerHTML = data;
+                // Now load the associated technology.js file.
+                const techScript = document.createElement('script');
+                techScript.src = 'animations/technology.js';
+                techScript.defer = true;
+                document.body.appendChild(techScript);
             })
             .catch(error => console.error('Error loading technology component:', error));
     </script>
