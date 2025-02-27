@@ -1,0 +1,72 @@
+.actionbuttons-container {
+    max-width: 900px;
+    margin: 7rem auto 4rem;
+    padding: 0 2rem;
+}
+
+.actionbuttons-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.action-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem 2rem;
+    background-color: rgba(255, 255, 255, 0.05);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+    min-width: 200px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.action-btn:hover {
+    transform: translateY(-5px);
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.btn-icon {
+    font-size: 1.5rem;
+}
+
+.btn-text {
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.work-btn {
+    background-color: rgba(66, 135, 245, 0.1);
+}
+
+.work-btn:hover {
+    background-color: rgba(66, 135, 245, 0.2);
+}
+
+.projects-btn {
+    background-color: rgba(66, 245, 147, 0.1);
+}
+
+.projects-btn:hover {
+    background-color: rgba(66, 245, 147, 0.2);
+}
+
+@media (max-width: 600px) {
+    .actionbuttons-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .action-btn {
+        width: 100%;
+        max-width: 300px;
+    }
+}

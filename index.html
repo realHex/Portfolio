@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="styles/home.css">
     <link rel="stylesheet" href="styles/infocard.css">
     <link rel="stylesheet" href="styles/technology.css">
+    <link rel="stylesheet" href="styles/actionbuttons.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -21,8 +22,10 @@
 
     <main class="home-content">
         <div id="infocard-placeholder"></div>
-        <!-- New placeholder for the technology card placed below the infocard -->
+        <!-- Technology component -->
         <div id="technology-placeholder"></div>
+        <!-- New action buttons component -->
+        <div id="actionbuttons-placeholder"></div>
     </main>
 
     <script>
@@ -55,6 +58,14 @@
                 document.body.appendChild(techScript);
             })
             .catch(error => console.error('Error loading technology component:', error));
+            
+        // Load the action buttons component
+        fetch('components/actionbuttons.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('actionbuttons-placeholder').innerHTML = data;
+            })
+            .catch(error => console.error('Error loading action buttons:', error));
     </script>
 
 </body>
