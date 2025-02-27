@@ -3,28 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Projects | Sajitha Fonseka</title>
+    <title>Contact Me | Sajitha Fonseka</title>
     <link rel="stylesheet" href="/public/assets/css/styles.css">
     <link rel="stylesheet" href="styles/navbar.css">
     <link rel="stylesheet" href="styles/home.css">
-    <link rel="stylesheet" href="styles/projects.css">
+    <link rel="stylesheet" href="styles/contacts.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" 
           integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" 
           crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="styles/carousel.css">
 </head>
 <body>
     <div id="navbar-placeholder"></div>
 
     <main class="home-content">
-        <div id="projects-placeholder"></div>
+        <div id="contacts-placeholder"></div>
     </main>
 
     <script>
-        // Load navbar component
         fetch('components/navbar.html')
             .then(response => response.text())
             .then(data => {
@@ -32,23 +30,12 @@
             })
             .catch(error => console.error('Error loading navbar:', error));
 
-        // Load projects component and initialize carousel afterward
-        fetch('components/projects.html')
+        fetch('components/contacts.html')
             .then(response => response.text())
             .then(data => {
-                document.getElementById('projects-placeholder').innerHTML = data;
-                
-                // Initialize carousels AFTER content is loaded
-                setTimeout(() => {
-                    const carousels = document.querySelectorAll('.carousel-container');
-                    console.log('Found', carousels.length, 'carousels');
-                    carousels.forEach(carousel => {
-                        new Carousel(carousel);
-                    });
-                }, 100);
+                document.getElementById('contacts-placeholder').innerHTML = data;
             })
-            .catch(error => console.error('Error loading projects:', error));
+            .catch(error => console.error('Error loading contacts:', error));
     </script>
-    <script src="animations/carousel.js"></script>
 </body>
 </html>

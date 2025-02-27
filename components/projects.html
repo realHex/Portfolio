@@ -47,6 +47,8 @@
             </div>
     </div>
     <br><p><center><b>Technologies used:</b> PyQt5, Python, FastAPI, Supabase</center></p>
+    <p><center>Team Project - 6 members</center></p>
+    <p><center>Team Role - Project Lead</center></p>
 
 </div>
 
@@ -98,24 +100,42 @@
         <br><br>
         <div>
         <div class="project-image">
-            <img class="quized" src="public/assets/quized/dashboard.png" alt="ticketsystem">
-            <img class="quized" src="public/assets/quized/quiz.png" alt="ticketsystem">
-            <img class="quized" src="public/assets/quized/history.png" alt="ticketsystem">
-            <img class="quized" src="public/assets/quized/import.png" alt="ticketsystem">
+            <div class="carousel-container">
+                <button class="carousel-button prev">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="carousel-button next">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+                <div class="carousel-slide">
+                    <img src="public/assets/quized/dashboard.png" alt="Dashboard">
+                </div>
+                <div class="carousel-slide">
+                    <img src="public/assets/quized/quiz.png" alt="Quiz">
+                </div>
+                <div class="carousel-slide">
+                    <img src="public/assets/quized/complete.png" alt="Complete">
+                </div>
+                <div class="carousel-slide">
+                    <img src="public/assets/quized/history.png" alt="History">
+                </div>
+                <div class="carousel-slide">
+                    <img src="public/assets/quized/import.png" alt="Import">
+                </div>
+            </div>
         </div>
         <br>
         <div class="project-description">
             <h3>Features</h3>
             <ul style="padding-left: 3rem;">
-                <li>Provides input fields, configuration options, and control buttons.</li>
-                <li>Shows ticket status, transaction logs, and real-time updates while logging transactions and configurations.</li>
-                <li>Polls the backend to fetch and display updates, implementing multi-threaded vendor and customer operations.</li>
-                <li>Thread safety is ensured using ReentrantLock for managing ticket additions and purchases.</li>
-                <li>REST APIs enable frontend-backend communication, supporting real-time ticket sales updates with charts.</li>
-                <li>System stores transaction data in a database and allows adding vendors/customers at runtime, including priority ticket access for VIP customers.</li>
+                <li>Allows user to upload CSV files containing questions</li>
+                <li>Saves the quizzes to the database</li>
+                <li>Allows attempting those quizzes and stores the score in History</li>
+                <li>Allows deleting quizzes the user uploaded themself</li>
+                <li>Allows other users to attempt another user's quizzes</li>
             </ul>    
             <br>
-            <p><center><b>Technologies used:</b> Java, Springboot, Angular, MongoDB</center></p>
+            <p><center><b>Technologies used:</b> React, Next.js, Supabase</center></p>
         </div>
         </div>
     </div>
