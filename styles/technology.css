@@ -24,7 +24,6 @@
 
 .tech-row-wrapper {
     max-width:  80%;
-    outline: 3px solid lime;
 }
 
 .tech-row-wrapper[data-animated="true"] {
