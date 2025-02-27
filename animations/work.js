@@ -83,6 +83,25 @@ function initializeWorkCards() {
     });
     
     console.log('Work cards initialization complete');
+    
+    // Add toggle functionality for the Middleman Simplified image
+    const toggleSimplifiedBtn = document.getElementById('toggle-simplified');
+    const simplifiedImageContainer = document.getElementById('simplified-image-container');
+    
+    if (toggleSimplifiedBtn && simplifiedImageContainer) {
+        console.log('Setting up toggle button for Middleman Simplified image');
+        toggleSimplifiedBtn.addEventListener('click', function() {
+            const isHidden = simplifiedImageContainer.classList.contains('hidden');
+            
+            if (isHidden) {
+                simplifiedImageContainer.classList.remove('hidden');
+                toggleSimplifiedBtn.textContent = 'Hide Middleman Simplified';
+            } else {
+                simplifiedImageContainer.classList.add('hidden');
+                toggleSimplifiedBtn.textContent = 'Show Middleman Simplified';
+            }
+        });
+    }
 }
 
 // Ensure CSS is properly applied

@@ -90,3 +90,19 @@
 .description p {
     margin-bottom: 1rem;
 }
+
+.toggle-btn {
+    background-color: #333;
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    margin: 1rem auto;
+    display: block;
+    transition: background-color 0.3s;
+}
+
+.toggle-btn:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
